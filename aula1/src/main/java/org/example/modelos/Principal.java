@@ -1,3 +1,6 @@
+package org.example.modelos;
+
+import java.util.ArrayList;
 import org.example.modelos.calculos.CalculadoraDeTempo;
 import org.example.modelos.calculos.FiltroRecomendacao;
 import org.example.modelos.modelos.Episodio;
@@ -45,10 +48,28 @@ public class Principal {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(meuFilme);
 
+
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+
+        var filmeDoPaulo = new Filme("Dogville", 2003);
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoPaulo);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+
+
+
     }
 }

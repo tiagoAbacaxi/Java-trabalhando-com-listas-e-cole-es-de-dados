@@ -18,4 +18,12 @@ public class Filme extends Titulo implements Classificavel {
     public int getClassificacao() {
         return (int) pegaMedia() / 2;
     }
+
+  public Filme(String dogville, int i) {
+    super();
+  }
+
+  public Filme() {
+
+  }
 }
